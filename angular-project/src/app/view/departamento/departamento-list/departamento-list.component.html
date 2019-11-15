@@ -1,0 +1,10 @@
+<mat-card class="background-color" fxFlex>
+    <mat-list *ngFor="let dep of departamentos" role="list" >
+            <mat-list-item (click)="selecionar(dep.id, false)" 
+            class="item-list" role="listitem" fxFlex>
+                    <span fxFlex>{{dep.nome | uppercase}} - {{dep.descricao}}</span>
+                    <button class="button-option" (click)="selecionar(dep.id, true)">
+                            <mat-icon>edit</mat-icon></button>
+            </mat-list-item>
+    </mat-list>
+</mat-card>
